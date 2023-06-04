@@ -1,5 +1,5 @@
 {
-  "name": "clickify-lib-core",
+  "name": "clickify-common",
   "version": "1.0.0",
   "description": "Common lib for Clickify",
   "main": "index.ts",
@@ -8,7 +8,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/agerard57/clickify-lib-core.git"
+    "url": "git+https://github.com/agerard57/clickify-common.git"
   },
   "keywords": [
     "lib"
@@ -16,9 +16,9 @@
   "author": "agerard57",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/agerard57/clickify-lib-core/issues"
+    "url": "https://github.com/agerard57/clickify-common/issues"
   },
-  "homepage": "https://github.com/agerard57/clickify-lib-core#readme",
+  "homepage": "https://github.com/agerard57/clickify-common#readme",
   "scripts": {
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
