@@ -1,4 +1,4 @@
-export enum OrdersStatuses {
+export const enum OrdersStatuses {
     PENDING = "pending",
     CONFIRMED = "confirmed",
     SHIPPED = "shipped",

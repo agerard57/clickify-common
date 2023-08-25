@@ -1,4 +1,4 @@
-export enum GeneratedSupportTopics {
+export const enum GeneratedSupportTopics {
   ORDER = "order",
   PAYMENTS = "payments",
   USER_ACCOUNTS = "userAccounts",

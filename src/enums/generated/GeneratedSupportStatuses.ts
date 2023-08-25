@@ -1,4 +1,4 @@
-export enum GeneratedSupportStatuses {
+export const enum GeneratedSupportStatuses {
     CANCELLED = "cancelled",
     IN_PROGRESS = "inProgress",
     RESOLVED = "resolved",

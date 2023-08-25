@@ -1,4 +1,4 @@
-export enum UserStatuses {
+export const enum UserStatuses {
     ACTIVE = "active",
     BANNED = "banned",
     INACTIVE = "inactive",

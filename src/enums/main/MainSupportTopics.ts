@@ -1,4 +1,4 @@
-export enum MainSupportTopics {
+export const enum MainSupportTopics {
     STORES_DRIVES = "storesDrives",
     ORDER = "order",
     RETURNS_REFUNDS = "returnsAndRefunds",
