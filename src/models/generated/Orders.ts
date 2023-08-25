@@ -1,19 +1,13 @@
-import { DateTime } from "luxon";
-import { ObjectId } from "mongodb";
+import { DateTime } from 'luxon';
+import { ObjectId } from 'mongodb';
+
+import { OrdersStatuses } from '../../enums';
 
 export interface Products {
   id: ObjectId;
   quantity: number;
   savedPrice: string; // String because of the currency
 }
-
-export type OrdersStatusType =
-  | "pending"
-  | "confirmed"
-  | "shipped"
-  | "dropped"
-  | "done"
-  | "cancelled";
 
 /**
  * @param {type} ObjectId   Store ID.
@@ -22,7 +16,7 @@ export type OrdersStatusType =
 export type ShippedToType = ObjectId | "client";
 
 /**
- * @param {type} user           User ID.
+ * @param {type} user       User ID.
  */
 export interface Orders {
   id: ObjectId;
@@ -32,7 +26,7 @@ export interface Orders {
   total: number;
   currency: string;
   discount?: number;
-  status: OrdersStatusType;
+  status: OrdersStatuses;
   shippedTo: {
     shippingAddress: ObjectId; // User.addressInfos.address.id
     destination: ShippedToType;

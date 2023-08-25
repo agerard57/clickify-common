@@ -1,7 +1,7 @@
-import { DateTime } from "luxon";
-import { ObjectId } from "mongodb";
+import { DateTime } from 'luxon';
+import { ObjectId } from 'mongodb';
 
-export type DemosStatusType = "waiting" | "inProgress" | "done" | "cancelled";
+import { DemosStatuses } from '../../enums';
 
 export interface Demos {
   id: ObjectId;
@@ -12,5 +12,5 @@ export interface Demos {
   details: string;
   openedOn: DateTime;
   updatedOn: DateTime;
-  status: DemosStatusType;
+  status: DemosStatuses;
 }

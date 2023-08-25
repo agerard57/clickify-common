@@ -1,15 +1,7 @@
 import { DateTime } from "luxon";
 import { ObjectId } from "mongodb";
+import { UserCategories, UserStatuses } from "../../enums";
 import { BaseAddress } from "./BaseAddress";
-
-export type UserStatusTypes = "active" | "banned" | "inactive";
-
-export type UserCategoryTypes =
-  | "user"
-  | "consultant"
-  | "merchandiser"
-  | "orderPicker"
-  | "admin";
 
 export interface Users {
   id: ObjectId;
@@ -33,8 +25,8 @@ export interface Users {
   favoriteStore?: ObjectId; // Stores.id
   registeredOn: DateTime;
   updatedOn: DateTime;
-  status?: UserStatusTypes;
-  category: UserCategoryTypes;
+  status?: UserStatuses;
+  category: UserCategories;
   notifications?: {
     content: string;
     timestamp: DateTime;

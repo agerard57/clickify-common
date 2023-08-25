@@ -1,5 +1,7 @@
-import { DateTime } from "luxon";
-import { ObjectId } from "mongodb";
+import { DateTime } from 'luxon';
+import { ObjectId } from 'mongodb';
+
+import { TypeOfDiscounts } from '../../enums';
 
 export interface Photos {
   url: string;
@@ -7,17 +9,15 @@ export interface Photos {
 }
 
 export interface Stock {
-  storeId: ObjectId; // Stores.id
+  storeId: ObjectId;            // Stores.id
   quantity: number;
 }
-
-export type TypeOfDiscountType = "none" | "percentage" | "fixed";
 
 export interface Pricing {
   productionCost?: number;
   currentPrice: number;
   retailPrice?: number;
-  typeOfDiscount: TypeOfDiscountType;
+  typeOfDiscount: TypeOfDiscounts;
   serviceFee: number;
 }
 
@@ -31,8 +31,8 @@ export interface Products {
   longDescription: string;
   photos?: Photos[];
   stock: Stock[];
-  category?: ObjectId; // Categories.id
-  tags?: ObjectId[]; // Tags.id
+  category?: ObjectId;          // Categories.id
+  tags?: ObjectId[];            // Tags.id
   pricing: Pricing;
   createdOn: DateTime;
   modifiedOn: DateTime;

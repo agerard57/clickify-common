@@ -1,5 +1,14 @@
-import { DateTime } from "luxon";
-import { ObjectId } from "mongodb";
+import { DateTime } from 'luxon';
+import { ObjectId } from 'mongodb';
+
+import {
+  Languages,
+  LayoutDispositions,
+  MainSupportStatuses,
+  PlanTypes,
+  WebsiteStatuses,
+  WebsiteSupportStatuses
+} from '../../enums';
 
 export interface BillingAddress {
   number: string;
@@ -10,14 +19,6 @@ export interface BillingAddress {
   country: string;
 }
 
-export type PlanTypes =
-  | "pending"
-  | "basic"
-  | "clickify"
-  | "premium"
-  | "none"
-  | "banned";
-
 export interface PlanHistory {
   current: boolean;
   plan: PlanTypes;
@@ -26,14 +27,10 @@ export interface PlanHistory {
   price?: number;
 }
 
-export type LangTypes = "en" | "fr";
-
-export type LayoutTypes = "left" | "centered" | "right";
-
 export interface LandingPage {
   text?: string;
   imagePath?: string;
-  layout: LayoutTypes;
+  layout: LayoutDispositions;
 }
 
 export interface AboutUs {
@@ -53,10 +50,8 @@ export interface AboutUs {
   photoPath?: string;
 }
 
-export type SupportStatusTypes = "offline" | "online" | "locked";
-
 export interface Support {
-  status: SupportStatusTypes;
+  status: WebsiteSupportStatuses;
   email: {
     confirmed: boolean;
     emailAddress: string;
@@ -72,10 +67,8 @@ export interface Colors {
   textColor: string;
 }
 
-export type WebsiteStatusTypes = "active" | "maintenance" | "inactive";
-
 export interface WebsiteInfos {
-  lang: LangTypes;
+  lang: Languages;
   domainName: string;
   landingPage: LandingPage;
   support: Support;
@@ -85,11 +78,9 @@ export interface WebsiteInfos {
   colors: Colors;
   createdOn: DateTime;
   updatedOn: DateTime;
-  status: WebsiteStatusTypes;
+  status: WebsiteStatuses;
   maintenanceMessage: string;
 }
-
-export type UserStatusTypes = "active" | "banned" | "inactive";
 
 export interface Companies {
   id: ObjectId;
@@ -106,5 +97,5 @@ export interface Companies {
   updatedOn: DateTime;
   refreshTokens?: string[];
   recoveryCode?: string;
-  status: UserStatusTypes;
+  status: MainSupportStatuses;
 }
