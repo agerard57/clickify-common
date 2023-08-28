@@ -15,6 +15,7 @@ export {
     WebsiteStatuses,
     WebsiteSupportStatuses,
     GeneratedModels,
-    MainModels
+    MainModels,
+    WebsiteSettings
 } from "./src";
 

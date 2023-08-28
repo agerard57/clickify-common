@@ -15,5 +15,5 @@ export {
     WebsiteStatuses,
     WebsiteSupportStatuses
 } from "./enums";
-export { GeneratedModels, MainModels } from "./models";
+export { GeneratedModels, MainModels, WebsiteSettings } from "./models";
 

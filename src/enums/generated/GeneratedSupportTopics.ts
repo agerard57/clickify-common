@@ -1,7 +1,7 @@
 export const enum GeneratedSupportTopics {
   ORDER = "order",
   PAYMENTS = "payments",
-  USER_ACCOUNTS = "userAccounts",
+  USER_ACCOUNT = "userAccount",
   PRODUCTS = "products",
   SHIPPING_DELIVERY = "shippingDelivery",
   CUSTOMER_SERVICE = "customerService",

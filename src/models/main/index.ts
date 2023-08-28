@@ -1,5 +1,5 @@
 import { Analytics } from "./Analytics";
-import { Companies, WebsiteInfos } from "./Companies";
+import { Companies } from "./Companies";
 import { Demos } from "./Demos";
 import { Documentation } from "./Documentation";
 import { Support } from "./Support";
@@ -10,5 +10,4 @@ export interface MainModels {
   Demos: Demos;
   Documentation: Documentation;
   Support: Support;
-  WebsiteInfos: WebsiteInfos;
 }
