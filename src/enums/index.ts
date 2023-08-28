@@ -18,6 +18,6 @@ export {
     LayoutDispositions,
     WebsiteStatuses,
     WebsiteSupportStatuses
-} from "./website";
+} from "./websiteSettings";
 
     
