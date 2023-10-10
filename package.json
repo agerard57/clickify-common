@@ -20,13 +20,15 @@
   "directories": {
     "lib": "lib"
   },
+  "dependencies": {
+    "luxon": "^3.3.0",
+    "mongodb": "^6.1.0"
+  },
   "devDependencies": {
     "@types/jest": "^26.0.24",
     "@types/luxon": "^3.3.1",
     "@types/mongodb": "^4.0.7",
     "jest": "^26.6.3",
-    "luxon": "^3.3.0",
-    "mongodb": "^6.1.0",
     "ts-jest": "^26.5.6",
     "typescript": "^4.3.5"
   }
